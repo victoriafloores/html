@@ -1,0 +1,94 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  if(isset($_POST['agregar'])){ //Si se envió el primer formulario
+$claves = array_keys($_POST);
+$producto = $claves[1];
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<form action="tienda de mascotas.php" method="post">
+<input type="hidden" name="agregar">
+<table border="1">
+<tr>
+<td width="150">
+Producto: <b>galleta de animales</b><br>
+Descripcion: <b>paquetes de galletas"</b><br>
+Precio: <b>1500000</b><br>
+<input type="submit" name="galleta" id="button" value="Añadir al carrito">
+</td>
+<td width="150">
+Producto: <b>jugetes para perro y hamster</b><br>
+Descripcion: <b>de todos los colores</b><br>
+Precio: <b>200000</b><br>
+<input type="submit" name="jugetes" id="button2" value="Añadir al carrito">
+</td>
+<td width="150">
+Producto: <b>cama de perro</b><br>
+Descripcion: <b>es muy comoda</b><br>
+Precio: <b>15002</b><br>
+<input type="submit" name="MP4" id="button3" value="Añadir al carrito">
+</td>
+</tr>
+<tr>
+<td>
+Producto: <b>jabon anti pulgas</b><br>
+Descripcion: <b>12"</b><br>
+Precio: <b>16980</b><br>
+<input type="submit" name="jabon" id="button3" value="Añadir al carrito">
+</td> <td>
+Producto: <b>comida para hamster</b><br>
+Descripcion: <b>alimento</b><br>
+Precio: <b>200</b><br>
+<input type="submit" name="comida" id="button3" value="Añadir al carrito">
+</td>
+<td>
+Producto: <b>plato para perro y hamster</b><br>
+Descripcion: <b>12Mpx</b><br>
+Precio: <b>3540</b><br>
+<input type="submit" name="plato" id="button3" value="Añadir al carrito">
+</td>
+</tr>
+<tr>
+<td>
+Producto: <b>alimento para perro</b><br>
+Descripcion: <b>comida</b><br>
+Precio: <b>200000</b><br>
+<input type="submit" name="comida" id="button3" value="Añadir al carrito">
+</td>
+<td>
+Producto: <b>shampoo de animales</b><br>
+Descripcion: <b>quita pulgas</b><br>
+Precio: <b>58</b><br>
+<input type="submit" name="shampoo" id="button3" value="Añadir al carrito">
+</td>
+<td>
+Producto: <b>casa jaula hamster</b><br>
+Descripcion: <b>casa con bola queda vuelta</b><br>
+Precio: <b>300000</b><br>
+<input type="submit" name="jaula" id="button3" value="Añadir al carrito">
+</td>
+</tr>
+</table>
+</form>
+<form action="productos.php" method="get">
+<h1>En el carrito de compras tiene los siguientes productos</h1>
+<input type="hidden" name="quitar">
+<?php
+if(!empty($_SESSION['pedido'])){ //Si hay productos en el carrito
+foreach($_SESSION['pedido'] as $prod => $unidades) {
+echo "$unidades unidades del producto $prod";
+echo "<input type='Submit' name='$prod' value='Quitar'><br>"; }
+?>
+</form>
+<form action="confirmar.php" method="post">
+<input type='Submit' name='Comprar' value="Confirmar compra">
+</form>
+<?php
+}
+?>
+</body>
+</html>
