@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Links & Buttons</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    /* El link sera azul cuando el cursor pase encima de el */
+    a:hover {
+      color: coral;
+    }
+    /* El link permanecera rojo cuando ya haya sido visitado */
+    /* a:visited {
+      color: red;
+    } */
+    /* El link sera amarillo al momento que el usuario haga click sobre el*/
+    a:active {
+      color: red;
+    }
+    /* Button Styling */
+    .btn {
+      background: #4c6ca0;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      color: #f4f4f4;
+      background: #446190;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <a class="btn" href="https://google.com/">My Link</a>
+  <br>
+  <br>
+  <button class="btn"><a href="https://nba.com/">My Button</button></a>
+</body>
+</html>
